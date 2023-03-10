@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Lesson 2</title>
+	<link rel="stylesheet" type="text/css" href="../Styles.css" />
+	<script type="text/javascript" src="./console.js"></script>
+	<script type="text/javascript" src="../Lessons/Lesson 2.js" defer></script>
+</head>
+
+<body>
+	<nav><a href="../index.html">Back</a></nav>
+	<main>
+		<h1>Lesson 2 - Variables</h1>
+		<br>
+		<p>Any data you print to the console in <span class="inline-code">Lesson 2.js</span> will appear below!</p>
+		<br>
+		<p id="name"></p>
+		<br>
+	</main>
+	<script type="text/javascript">consoleLogger("Lesson 2");</script>
+	<script type="text/javascript">
+		(function initHelloName() {
+			const p = document.getElementById("name");
+			if (name) {
+				p.textContent = name;
+			} else {
+				p.textContent = "Did you try making your own variables in Lesson 2.js? Remember to make a local variable called 'name' and assign your name as its value!";
+			}
+		})();
+	</script>
+	<script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script>
+</body>
+
+</html>

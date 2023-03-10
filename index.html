@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+
+<!-- This is a HTML comment, HTML comments are multi-line comments. -->
+<!-- You found the hidden files! Try not to mess arround too much with the hidden files, you could accidentally break the tutorial. -->
+	
+<head>
+	<!-- This is just some extra default content -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<!-- This is the title of the tab -->
+	<title>JavaScript Tutorial</title>
+	<!-- This makes the page look a little nicer -->
+	<link rel="stylesheet" type="text/css" href="./Styles.css" />
+</head>
+
+<body>
+	<!-- This will allow you to navigate the lessons when you're ready to run them. -->
+	<nav></nav>
+	<!-- This adds each lesson to the navigation bar (it's more convenient to use JavaScript than the hardcode lots of anchor tags) -->
+	<script type="text/javascript">
+		(function initNavBar() {
+			const pages = [
+				"Console",
+				"Lesson 1",
+				"Lesson 2",
+				"Lesson 3",
+				"Lesson 4",
+				"Lesson 5",
+				"Challenge 1",
+				"Challenge 2",
+				"Challenge 3",
+				"Challenge 4",
+				"Challenge 5",
+				"Challenge 6"
+			];
+			const nav = document.querySelector("nav");
+			const ul = document.createElement("ul");
+			for (const page of pages) {
+				const li = document.createElement("li");
+				const anchor = document.createElement("a");
+				anchor.setAttribute("href", "./Pages/" + page + ".html");
+				anchor.textContent = page;
+				li.append(anchor);
+				ul.append(anchor);
+			}
+			nav.append(ul)
+		})();
+	</script>
+	<main>
+		<h1>Intro to JS</h1>
+		<br>
+		<p>Learning JavaScript is fun!</p>
+	</main>
+	<!--
+	This script places a badge on your repl's full-browser view back to your repl's cover
+	page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+	teal, blue, blurple, magenta, pink!
+	-->
+	<script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script>
+</body>
+
+</html>

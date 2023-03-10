@@ -1,0 +1,111 @@
+/* This is a CSS comment, look familiar? */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+nav {
+	font-family: monospace;
+	background-color: dodgerblue;
+}
+
+nav ul {
+	list-style-type: none;
+}
+
+nav li {
+	display: inline;
+}
+
+nav a {
+	display: inline-block;
+	text-decoration: none;
+	text-align: center;
+	padding: 9px 13px 9px 13px;
+	text-shadow: -1px 1px black;
+	color: whitesmoke;
+	transition-duration: 0.2s;
+}
+
+nav a:hover {
+	background-color: #0059b3;
+}
+
+body {
+	background-color: #003366;
+}
+
+main {
+	padding: 20px;
+	color: white;
+	font-family: monospace;
+}
+
+main h1 {
+	text-shadow: -2px 2px #5c5c5c;
+}
+
+.code {
+	font-family: monospace;
+	color: gray;
+	background-color: lightgray;
+	padding: 10px;
+	border-radius: 8px;
+}
+
+.inline-code {
+	font-family: monospace;
+	color: gray;
+	background-color: lightgray;
+	padding: 1px 3px 1px 3px;
+	border-radius: 5px;
+}
+
+.code .title {
+	font-size: 16px;
+	font-weight: bold;
+	color: #474747;
+	padding: 15px;
+}
+
+.code .line {
+	display: flex;
+}
+
+.code .line .line-number {
+	padding-right: 8px;
+}
+
+pre {
+	tab-size: 4;
+}
+
+.number {
+	color: goldenrod;
+}
+
+.string {
+	color: brown;
+}
+
+.boolean {
+	color: blue;
+}
+
+.correct {
+	background-color: lightgreen;
+	color: black;
+	padding: 10px;
+	border: solid green 2px;
+	border-radius: 10px;
+}
+
+.error {
+	background-color: coral;
+	color: black;
+	padding: 10px;
+	border: solid red 2px;
+	border-radius: 10px;
+}

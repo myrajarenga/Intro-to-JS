@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Challenge 6</title>
+	<link rel="stylesheet" type="text/css" href="../Styles.css" />
+	<script type="text/javascript" src="./console.js"></script>
+</head>
+
+<body>
+	<nav><a href="../index.html">Back</a></nav>
+	<main>
+		<h1>Challenge 6</h1>
+		<p>JavaScript is fun and it lets you make cool things, this console is made using JavaScript!</p>
+		<p>Use console.log to print data to the console!</p>
+		<br>
+		<div id="message"></div>
+		<br>
+	</main>
+	<script type="text/javascript" defer>
+		consoleLogger("Challenge 6");
+		(function initChallenge() {
+			const message = document.getElementById("message");
+			fetch("../Challenges/Challenge 6.js").then(function (res) {return res.text();}).then(function (code) {
+				try {
+					eval(code + `
+const _loggedLog = logged.length;
+//printPyramid("$", 1);
+//printPyramid("@", 2);
+//printPyramid("^", 7);
+const logsPerCall = (logged.length - _loggedLog) / 3;
+if (logsPerCall === 0) {
+	message.setAttribute("class", "error");
+	message.textContent = "Hmm.. 'printPyramid' is not calling console.log...";
+} else if (logsPerCall !== 1) {
+	message.setAttribute("class", "error");
+	message.textContent = "Hmm.. 'printPyramid' is calling console.log more than once...";
+} else if (!(logged.includes("$") && logged.includes(" @\n@@@") && logged.includes("      ^\n     ^^^\n    ^^^^^\n   ^^^^^^^\n  ^^^^^^^^^\n ^^^^^^^^^^^\n^^^^^^^^^^^^^"))) {
+	message.setAttribute("class", "error");
+	message.textContent = "Hmm... your function doesn't seem to be returning the correct values.";
+} else {
+	message.setAttribute("class", "correct");
+	message.textContent = "You completed this challenge! Nice work!";
+}`);
+				} catch (err) {
+					if (err.message === "printPyramid is not defined") {
+						message.setAttribute("class", "error");
+						message.textContent = "Hmm... make sure you correctly declare a function called 'printPyramid'.";
+					} else {
+						message.setAttribute("class", "error");
+						message.textContent = "Oh no! There's an error in your code... " + err.message;
+					}
+				}
+			});
+		})();
+	</script>
+	<script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script>
+</body>
+
+</html>
