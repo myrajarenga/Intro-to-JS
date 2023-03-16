@@ -4,11 +4,12 @@
 // a number and returns a boolean
 // indicating whether or not the input
 // number is a prime number.
+
 function isPrime(number) {
-  if (number === isPrime){
+  if (number === 2, 3, 5, 7,11) {
     return true;
-    else {
+    
+  } else {
     return false;
-    }
   }
 }
