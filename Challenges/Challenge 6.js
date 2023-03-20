@@ -16,13 +16,14 @@
  #####
 #######
 */
-function printPyramind(char , height){ 
-  for (let i = 1; i <= height; height++){
+function printPyramid(char, height) { 
+  for (let i = 1; i <= height; i++) {
     let spaces = ' '.repeat(height - i);
-    let blocks = char.repeat(2*i - 1);
+    let blocks = char.repeat(2 * i - 1);
+    console.log(spaces + blocks + spaces);
   }
-  console.log(spaces + blocks + spaces);
 }
 
-printPyramind('#', 4)
+printPyramid('#', 4);
+
   
